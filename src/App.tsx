@@ -15,7 +15,8 @@ const Container = styled.div`
 `;
 
 const MapContainer = styled.div`
-  width: 800px;
+  width: 1200px;
+  margin: 0 auto;
 `;
 
 function App() {
@@ -102,7 +103,7 @@ function App() {
         <MapContainer>
           <TransformWrapper wheel={{ step: 5 }}>
             <TransformComponent>
-              <img src="map.png" alt="test" width="800px" />
+              <img src="map.png" alt="test" width="1200px" />
             </TransformComponent>
           </TransformWrapper>
         </MapContainer>
