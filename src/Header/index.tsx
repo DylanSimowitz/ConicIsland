@@ -50,8 +50,8 @@ export const Header = (props: Props) => {
         <Logo src="logo.png" alt="" />
       </div>
       <Hero>
-        <Button href="#map">Park Map</Button>
         <Button href="#rides">Rides & Attractions</Button>
+        <Button href="#map">Park Map</Button>
       </Hero>
     </StyledHeader>
   );

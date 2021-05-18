@@ -23,12 +23,13 @@ export const RideItem: React.FC<Props> = ({ title, children, rideId }) => {
   const handleClick = () => {
       setOpen(!open)
   };
-  const Portal = usePortal(".portal", Modal);
+  const Portal = usePortal("#portal", Modal);
   return (
     <Container>
       <h2>{title}</h2>
       <p>{children}</p>
-      <Button onClick={handleClick}>View Ride</Button>
+      {/* <Button onClick={handleClick}>View Ride</Button> */}
+          <GeogebraEmbed id={rideId} />
       {open && (
         <Portal>
           <GeogebraEmbed id={rideId} />
