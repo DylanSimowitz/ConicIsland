@@ -1,9 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { GeogebraEmbed } from "../GeogebraEmbed";
-import { Button } from "../Header";
-import usePortal from "../hooks/usePortal";
-import { Modal } from "../Modal";
 
 interface Props {
   title: string;
@@ -19,22 +16,11 @@ const Container = styled.div`
 `;
 
 export const RideItem: React.FC<Props> = ({ title, children, rideId }) => {
-  const [open, setOpen] = useState(false);
-  const handleClick = () => {
-      setOpen(!open)
-  };
-  const Portal = usePortal("#portal", Modal);
   return (
     <Container>
       <h2>{title}</h2>
       <p>{children}</p>
-      {/* <Button onClick={handleClick}>View Ride</Button> */}
-          <GeogebraEmbed id={rideId} />
-      {open && (
-        <Portal>
-          <GeogebraEmbed id={rideId} />
-        </Portal>
-      )}
+      <GeogebraEmbed id={rideId} />
     </Container>
   );
 };
